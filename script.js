@@ -17,7 +17,7 @@ function pojawSie() {
 
 
     var top = Math.random() * 400;
-    var left = Math.random() * 750;
+    var left = Math.random() * 850;
     var width = (Math.random() * 50) + 50;
 
     if (Math.random() > 0.5) {
