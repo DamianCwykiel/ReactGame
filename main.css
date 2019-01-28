@@ -5,7 +5,7 @@ body {
     box-sizing: border-box;
     font-family: 'Merienda', cursive;
 }
-#playField {
+#boisko {
     background-color: gray;
     width: 80vw;
     height: 80vh;
