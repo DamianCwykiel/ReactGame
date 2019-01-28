@@ -1,45 +1,45 @@
-/*REACTION_GAME*/
+/*Running_Shapes*/
 
 var start = new Date().getTime();
 
-function losujKolory() {
-    var litery = '0123456ABCDEF'.split('');
-    var kolory = "#";
+function getColours() {
+    var letters = '0123456ABCDEF'.split('');
+    var colours = "#";
     for (i = 0; i < 6; i++) {
-        kolory = kolory + litery[Math.floor(Math.random() * 16)]
+        colours = colours + letters[Math.floor(Math.random() * 16)]
     }
-    return (kolory);
+    return (colours);
 }
 
-function pojawSie() {
+function popUp() {
     var top = Math.random() * 400;
     var left = Math.random() * 850;
     var width = (Math.random() * 50) + 50;
     if (Math.random() > 0.5) {
-        document.getElementById("kwadrat").style.borderRadius = "50%";
+        document.getElementById("shapes").style.borderRadius = "50%";
     } else {
-        document.getElementById("kwadrat").style.borderRadius = "0";
+        document.getElementById("shapes").style.borderRadius = "0";
     }
-    document.getElementById("kwadrat").style.backgroundColor = losujKolory();
-    document.getElementById("kwadrat").style.top = top + "px";
-    document.getElementById("kwadrat").style.left = left + "px";
-    document.getElementById("kwadrat").style.width = width + "px";
-    document.getElementById("kwadrat").style.height = width + "px";
-    document.getElementById("kwadrat").style.display = "block";
+    document.getElementById("shapes").style.backgroundColor = getColours();
+    document.getElementById("shapes").style.top = top + "px";
+    document.getElementById("shapes").style.left = left + "px";
+    document.getElementById("shapes").style.width = width + "px";
+    document.getElementById("shapes").style.height = width + "px";
+    document.getElementById("shapes").style.display = "block";
     
     start = new Date().getTime();
 }
 
-function pojawSiePoPrzerwie() {
-    setTimeout(pojawSie, Math.random() * 1000);
+function popUpAfterPause() {
+    setTimeout(popUp, Math.random() * 1000);
 }
-pojawSiePoPrzerwie();
+popUpAfterPause();
 
-document.getElementById("kwadrat").onclick = function () {
-    document.getElementById("kwadrat").style.display = "none";
+document.getElementById("shapes").onclick = function () {
+    document.getElementById("shapes").style.display = "none";
     var end = new Date().getTime();
     var reakcja = (end - start) / 1000;
-    document.getElementById("reakcja").innerHTML = reakcja + " s.";
+    document.getElementById("clickTimer").innerHTML = reakcja + " s.";
     
-    pojawSiePoPrzerwie();
+    popUpAfterPause();
 }
