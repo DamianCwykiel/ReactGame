@@ -1,10 +1,11 @@
 /*RUNNING_SHAPES*/
 body {
     background-color: green;
+	font-family: 'Merienda', cursive;
+	box-sizing: border-box;
     margin: 0;
+	overflow-x: hidden;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Merienda', cursive;
 }
 #playGround {
     background-color: gray;
@@ -14,13 +15,13 @@ body {
     margin-left: 10%;
 }
 #shapes {
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
     background-color: red;
-    display: noe;
-    position: relative;
+    display: none;
+    position: absolute;
     top: 150px;
-    left: 300px;
+    left: 150px;
 }
 .p {
     font-size: 25px;
@@ -46,3 +47,19 @@ body {
     background-size: cover;
     margin-bottom: 10px;
 }
+
+/*MEDIA QUERIES*/
+
+@media (max-width: 575.98px) {
+	
+}
+
+
+
+
+
+
+
+
+
+
