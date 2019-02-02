@@ -11,7 +11,7 @@ function getColors() {
 
 function showUp() {
 	var top = Math.random() * 380;
-	var left = Math.random() * 650;
+	var left = Math.random() * 550;
 	var width = (Math.random() * 50) + 50;
 	if (Math.random() > 0.5) {
 		document.getElementById("shapes").style.borderRadius = "50%";
